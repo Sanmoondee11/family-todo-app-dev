@@ -11,6 +11,7 @@ import { PokedexProvider } from "./context/PokedexContext"; // 追加
 
 function App() {
   return (
+
     <PokedexProvider>
       {" "}
       {/* ここでラップ */}

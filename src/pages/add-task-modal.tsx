@@ -1,4 +1,4 @@
-const AddTask: React.FC = () => {
+const AddTaskModal: React.FC = () => {
   return (
     <>
       {/* You can open the modal using document.getElementById('ID').showModal() method */}
@@ -6,7 +6,7 @@ const AddTask: React.FC = () => {
         className="btn"
         onClick={() => document.getElementById("my_modal_3")!.showModal()}
       >
-       タスクを追加する
+        追加
       </button>
       <dialog id="my_modal_3" className="modal">
         <div className="modal-box">
@@ -16,12 +16,36 @@ const AddTask: React.FC = () => {
               ✕
             </button>
           </form>
-          <h3 className="font-bold text-lg">Hello!</h3>
-          <p className="py-4">Press ESC key or click on ✕ button to close</p>
+          <h3 className="font-bold text-lg">新しいタスク</h3>
+          <div className="py-4 space-y-3">
+            <p className="py-4 space-y-3">
+              <label className="input input-bordered flex items-center gap-2">
+                タスク名
+                <input type="text" className="grow" placeholder="宿題" />
+              </label>
+              <label className="input input-bordered flex items-center gap-2">
+                メモ
+                <input
+                  type="text"
+                  className="grow"
+                  placeholder="さんすうの宿題"
+                />
+              </label>
+            </p>
+            <select className="select select-bordered w-full max-w-xs">
+              <option disabled selected>
+               カテゴリーを選ぶ
+              </option>
+              <option>勉強</option>
+              <option>お手伝い</option>
+              <option>その他</option>
+            </select>
+          </div>
+          <button className="btn btn-accent w-full">タスクを追加</button>
         </div>
       </dialog>
     </>
   );
 };
 
-export default AddTask;
+export default AddTaskModal;
