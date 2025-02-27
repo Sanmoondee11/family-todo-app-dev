@@ -1,4 +1,4 @@
-import { BrowserRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 import AddTaskModal from "./add-task-modal";
 
 const Header: React.FC = () => {
@@ -28,13 +28,13 @@ const Header: React.FC = () => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
               <li>
-                <a>ホーム</a>
+                <Link to="/home">ホーム</Link>
               </li>
               <li>
-                <a>ガチャガチャ</a>
+                <Link to="/pokedex">図鑑</Link>
               </li>
               <li>
-                <a>ログアウト</a>
+              <Link to="/">ログイン画面</Link>
               </li>
             </ul>
           </div>

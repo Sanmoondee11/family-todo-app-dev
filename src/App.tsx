@@ -18,10 +18,6 @@ function App() {
       <BrowserRouter>
         <div>
           <nav>
-            <Link to="/">ログイン画面</Link>
-            <Link to="/header">ヘッダー</Link>
-            <Link to="/home">ホーム</Link>
-            <Link to="/pokedex">ポケモン図鑑</Link>
             <Link to="/gacha">ポケモンガチャ</Link>
           </nav>
 

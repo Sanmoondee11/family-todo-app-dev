@@ -5,6 +5,7 @@ import { useState } from "react";
 import { usePokedex } from "../context/PokedexContext";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import Header from "./Header";
 
 const PokedexPage: React.FC = () => {
   const { caughtPokemon, selectPokemon, selectedPokemon, closeDetail } =
@@ -29,7 +30,10 @@ const PokedexPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-b from-red-500 to-red-700 p-4">
       <div className="max-w-4xl mx-auto">
         <div className="flex justify-between items-center mb-6">
-          <h1 className="text-3xl font-bold text-white">ポケモン図鑑</h1>
+          {/* <h1 className="text-3xl font-bold text-white">ポケモン図鑑</h1> */}
+          <div>
+            <Header/>
+          </div>
           <Link to="/" className="btn btn-secondary">
             戻る
           </Link>

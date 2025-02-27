@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Situation: React.FC = () => {
   return (
     <>
@@ -21,7 +23,9 @@ const Situation: React.FC = () => {
             <button className="btn btn-active btn-secondary block w-full">
               今やっている
             </button>
-            <button className="btn btn-accent block w-full">おわった！</button>
+            <Link to="/gacha" className="btn btn-accent block w-full">おわった！</Link>
+
+            {/* <button className="btn btn-accent block w-full">おわった！</button> */}
           </p>
         </div>
       </dialog>
