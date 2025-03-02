@@ -1,4 +1,4 @@
-const Login: React.FC = () => {
+const LoginPage: React.FC = () => {
   return (
     <div>
       <div className="card bg-neutral text-neutral-content w-96 ">
@@ -6,7 +6,10 @@ const Login: React.FC = () => {
           <h2 className="card-title my-8 font-bold text-2xl">ログイン</h2>
           <p>
             {" "}
-            <label className="input input-bordered flex items-center gap-2">
+            <label
+              className="input input-bordered flex items-center gap-2"
+           
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
@@ -62,4 +65,4 @@ const Login: React.FC = () => {
   );
 };
 
-export default Login;
+export default LoginPage;
