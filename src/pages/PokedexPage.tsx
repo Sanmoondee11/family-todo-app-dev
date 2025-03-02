@@ -32,10 +32,10 @@ const PokedexPage: React.FC = () => {
         <div className="flex justify-between items-center mb-6">
           {/* <h1 className="text-3xl font-bold text-white">ポケモン図鑑</h1> */}
           <div>
-            <Header/>
+            <Header />
           </div>
-          <Link to="/" className="btn btn-secondary">
-            戻る
+          <Link to="/home" className="btn btn-secondary">
+            ホーム
           </Link>
         </div>
         <div className="bg-white rounded-lg p-4 mb-6">

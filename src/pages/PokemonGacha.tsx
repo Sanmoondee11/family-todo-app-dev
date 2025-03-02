@@ -57,7 +57,7 @@ const PokemonGacha: React.FC = () => {
         ポケモンガチャ
       </h1> */}
       <div>
-        <Header/>
+        <Header />
       </div>
       <div className="w-full max-w-sm bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-6 shadow-2xl relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-sky-200 via-sky-300 to-sky-400 opacity-30 animate-gradient-x"></div>
@@ -66,9 +66,9 @@ const PokemonGacha: React.FC = () => {
             {pokemon && isRevealed && (
               <motion.div
                 key={pokemon.id}
-                initial={{ opacity: 0, scale: 0.5, rotateY: 180 }}
-                animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-                exit={{ opacity: 0, scale: 0.5, rotateY: -180 }}
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.5 }}
                 transition={{ duration: 0.5 }}
                 className="relative z-10 flex flex-col items-center justify-center h-full"
               >
