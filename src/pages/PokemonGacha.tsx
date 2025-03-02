@@ -53,12 +53,12 @@ const PokemonGacha: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-sky-300 to-sky-500 overflow-hidden p-4">
-      {/* <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-white drop-shadow-lg">
+      <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-white drop-shadow-lg">
         ポケモンガチャ
-      </h1> */}
-      <div>
-        <Header/>
-      </div>
+      </h1>
+      {/* <div>
+        <Header />
+      </div> */}
       <div className="w-full max-w-sm bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-6 shadow-2xl relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-sky-200 via-sky-300 to-sky-400 opacity-30 animate-gradient-x"></div>
         <div className="pokemon-display-area h-64 sm:h-80">
@@ -66,9 +66,9 @@ const PokemonGacha: React.FC = () => {
             {pokemon && isRevealed && (
               <motion.div
                 key={pokemon.id}
-                initial={{ opacity: 0, scale: 0.5, rotateY: 180 }}
-                animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-                exit={{ opacity: 0, scale: 0.5, rotateY: -180 }}
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.5 }}
                 transition={{ duration: 0.5 }}
                 className="relative z-10 flex flex-col items-center justify-center h-full"
               >
@@ -120,13 +120,13 @@ const PokemonGacha: React.FC = () => {
         <button
           onClick={handleGacha}
           disabled={isAnimating}
-          className="btn btn-primary px-6 py-3 text-lg font-bold"
+          className="btn btn-primary px-6 py-2 text-lg font-bold"
         >
-          ポケモンを引く
+          ガチャを引く
         </button>
         <Link
           to="/pokedex"
-          className="btn btn-secondary px-6 py-3 text-lg font-bold"
+          className="btn btn-secondary px-6 py-2 text-lg font-bold"
         >
           図鑑
         </Link>

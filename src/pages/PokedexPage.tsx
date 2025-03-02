@@ -27,15 +27,15 @@ const PokedexPage: React.FC = () => {
   const collectionProgress = (caughtPokemon.length / 1008) * 100;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-red-500 to-red-700 p-4">
+    <div className="min-h-screen bg-red-500  p-4">
       <div className="max-w-4xl mx-auto">
         <div className="flex justify-between items-center mb-6">
-          {/* <h1 className="text-3xl font-bold text-white">ポケモン図鑑</h1> */}
-          <div>
-            <Header/>
-          </div>
-          <Link to="/" className="btn btn-secondary">
-            戻る
+          <h1 className="text-3xl font-bold text-white">ポケモン図鑑</h1>
+          {/* <div>
+            <Header />
+          </div> */}
+          <Link to="/home" className="btn btn">
+            ホーム
           </Link>
         </div>
         <div className="bg-white rounded-lg p-4 mb-6">
