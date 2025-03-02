@@ -1,4 +1,4 @@
-const Login: React.FC = () => {
+const LoginPage: React.FC = () => {
   return (
     <div>
       <div className="card bg-neutral text-neutral-content w-96 ">
@@ -62,4 +62,4 @@ const Login: React.FC = () => {
   );
 };
 
-export default Login;
+export default LoginPage;

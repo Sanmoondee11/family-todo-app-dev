@@ -34,7 +34,10 @@ const Header: React.FC = () => {
                 <Link to="/pokedex">図鑑</Link>
               </li>
               <li>
-              <Link to="/">ログイン画面</Link>
+              <Link to="/">ログイン画面gpt</Link>
+              </li>
+              <li>
+              <Link to="/login">ログイン画面</Link>
               </li>
             </ul>
           </div>
