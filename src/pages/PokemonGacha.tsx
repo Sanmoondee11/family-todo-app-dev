@@ -53,12 +53,12 @@ const PokemonGacha: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-sky-300 to-sky-500 overflow-hidden p-4">
-      {/* <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-white drop-shadow-lg">
+      <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-white drop-shadow-lg">
         ポケモンガチャ
-      </h1> */}
-      <div>
+      </h1>
+      {/* <div>
         <Header />
-      </div>
+      </div> */}
       <div className="w-full max-w-sm bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-6 shadow-2xl relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-sky-200 via-sky-300 to-sky-400 opacity-30 animate-gradient-x"></div>
         <div className="pokemon-display-area h-64 sm:h-80">
@@ -120,13 +120,13 @@ const PokemonGacha: React.FC = () => {
         <button
           onClick={handleGacha}
           disabled={isAnimating}
-          className="btn btn-primary px-6 py-3 text-lg font-bold"
+          className="btn btn-primary px-6 py-2 text-lg font-bold"
         >
-          ポケモンを引く
+          ガチャを引く
         </button>
         <Link
           to="/pokedex"
-          className="btn btn-secondary px-6 py-3 text-lg font-bold"
+          className="btn btn-secondary px-6 py-2 text-lg font-bold"
         >
           図鑑
         </Link>
