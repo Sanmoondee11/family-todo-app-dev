@@ -57,7 +57,7 @@ const PokemonGacha: React.FC = () => {
         ポケモンガチャ
       </h1> */}
       <div>
-        <Header/>
+        <Header />
       </div>
       <div className="w-full max-w-sm bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-6 shadow-2xl relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-sky-200 via-sky-300 to-sky-400 opacity-30 animate-gradient-x"></div>

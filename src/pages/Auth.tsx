@@ -1,10 +1,10 @@
 // src/components/Auth.tsx
 import React, { useState } from "react";
-import { SignIn, SignUp } from "../services/Auth";
+import { signIn, signUp } from "../services/Auth";
 
 const Auth: React.FC = () => {
   const [email, setEmail] = useState("");
-  const [username, setUserName] = useState("");
+  // const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [isLogin, setIsLogin] = useState(true);
   const [errorMessage, setErrorMessage] = useState("");
@@ -13,7 +13,7 @@ const Auth: React.FC = () => {
     setErrorMessage("");
     try {
       if (isLogin) {
-        const {  error } = await SignIn(email, password);
+        const {  error } = await signIn(email, password);
         if (error) {
           setErrorMessage("ログインエラー: " + error.message);
         } else {
@@ -21,7 +21,7 @@ const Auth: React.FC = () => {
           // ログイン後のリダイレクト処理などを追加
         }
       } else {
-        const {  error } = await SignUp(email, password);
+        const {  error } = await signUp(email, password);
         if (error) {
           setErrorMessage("サインアップエラー: " + error.message);
         } else {
@@ -69,9 +69,9 @@ const Auth: React.FC = () => {
         <input
           className="grow text-lg"
           type="text"
-          placeholder="user-name"
-          value={username}
-          onChange={(e) => setUserName(e.target.value)}
+          placeholder="username"
+          // value={username}
+          // onChange={(e) => setUserName(e.target.value)}
         />
       </label>
       {/* パスワード入力欄 */}
