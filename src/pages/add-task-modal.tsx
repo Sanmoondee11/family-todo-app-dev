@@ -17,7 +17,7 @@ const AddTaskModal: React.FC = () => {
             </button>
           </form>
           <h3 className="font-bold text-lg">新しいタスク</h3>
-          <div className="py-4 space-y-3">
+          <div>
             <p className="py-4 space-y-3">
               <label className="input input-bordered flex items-center gap-2">
                 タスク名
@@ -31,15 +31,15 @@ const AddTaskModal: React.FC = () => {
                   placeholder="さんすうの宿題"
                 />
               </label>
+              <select className="select select-bordered w-full max-w-xs">
+                <option disabled selected>
+                  カテゴリーを選ぶ
+                </option>
+                <option>勉強</option>
+                <option>お手伝い</option>
+                <option>その他</option>
+              </select>{" "}
             </p>
-            <select className="select select-bordered w-full max-w-xs">
-              <option disabled selected>
-               カテゴリーを選ぶ
-              </option>
-              <option>勉強</option>
-              <option>お手伝い</option>
-              <option>その他</option>
-            </select>
           </div>
           <button className="btn btn-accent w-full">タスクを追加</button>
         </div>

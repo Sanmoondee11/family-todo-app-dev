@@ -3,7 +3,6 @@ import { supabase } from "../supabaseClient";
 
 export const signUp = async (
   email: string,
-  // username: string,
   password: string
 ) => {
   const { data, error } = await supabase.auth.signUp({
@@ -11,7 +10,7 @@ export const signUp = async (
     options: {
       // ユーザー情報
       data: {
-        username: "fuka",
+        user_name: 'fuka',
       },
     },
     password,
