@@ -53,9 +53,9 @@ const PokemonGacha: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-sky-300 to-sky-500 overflow-hidden p-4">
-      {/* <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-white drop-shadow-lg">
+      <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-white drop-shadow-lg">
         ポケモンガチャ
-      </h1> */}
+      </h1>
       <div>
         <Header />
       </div>
