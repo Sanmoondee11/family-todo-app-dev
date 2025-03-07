@@ -7,6 +7,8 @@ import PokemonGacha from "./pages/PokemonGacha";
 import PokedexPage from "./pages/PokedexPage";
 import { PokedexProvider } from "./context/PokedexContext"; // 追加
 import Auth from "./pages/Auth";
+import MainLayout from "./layouts/MainLayout";
+import TodoApp from "./feautures/TodoApp";
 
 // import NotFound from './pages/NotFound';
 
@@ -14,7 +16,6 @@ function App() {
   return (
     <PokedexProvider>
       {" "}
-      {/* ここでラップ */}
       <BrowserRouter>
         <div>
           <nav>
@@ -28,6 +29,9 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/gacha" element={<PokemonGacha />} />
             <Route path="/pokedex" element={<PokedexPage />} />
+            <Route path="/app" element={<MainLayout />} />
+            <Route index element={<Home />} />
+            <Route index element={<TodoApp />} />
           </Routes>
         </div>
       </BrowserRouter>
