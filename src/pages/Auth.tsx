@@ -1,10 +1,9 @@
 // src/components/Auth.tsx
 import React, { useState } from "react";
-import { SignIn, SignUp } from "../services/Auth";
+import { signIn, signUp } from "../services/Auth";
 
 const Auth: React.FC = () => {
   const [email, setEmail] = useState("");
-  const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [isLogin, setIsLogin] = useState(true);
   const [errorMessage, setErrorMessage] = useState("");
@@ -13,7 +12,7 @@ const Auth: React.FC = () => {
     setErrorMessage("");
     try {
       if (isLogin) {
-        const {  error } = await SignIn(email, password);
+        const {  error } = await signIn(email, password);
         if (error) {
           setErrorMessage("ログインエラー: " + error.message);
         } else {
@@ -21,7 +20,7 @@ const Auth: React.FC = () => {
           // ログイン後のリダイレクト処理などを追加
         }
       } else {
-        const {  error } = await SignUp(email, password);
+        const {  error } = await signUp(email, password);
         if (error) {
           setErrorMessage("サインアップエラー: " + error.message);
         } else {
@@ -56,24 +55,7 @@ const Auth: React.FC = () => {
           onChange={(e) => setEmail(e.target.value)}
         />
       </label>
-      {/* ユーザー名入力欄 */}
-      <label className="input input-bordered flex items-center gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 16 16"
-                fill="currentColor"
-                className="h-4 w-4 opacity-70"
-              >
-                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" />
-              </svg>
-        <input
-          className="grow text-lg"
-          type="text"
-          placeholder="user-name"
-          value={username}
-          onChange={(e) => setUserName(e.target.value)}
-        />
-      </label>
+
       {/* パスワード入力欄 */}
       <label className="input input-bordered flex items-center gap-2">
         <svg

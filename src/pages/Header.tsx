@@ -67,7 +67,6 @@ const Header: React.FC = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <AddTaskModal />
         </div>
       </div>
     </>
