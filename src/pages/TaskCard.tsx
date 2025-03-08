@@ -17,7 +17,7 @@ const TaskCard: React.FC<TaskCardProps> = ({ task }) => {
   return (
     <>
       <div
-        className="card bg-base-100 max-width shadow-xl "
+        className="card bg-base-100 max-width shadow-xl"
         onClick={openModal} // モーダルを開く処理
       >
         <figure>

@@ -13,10 +13,7 @@ interface Task {
   category: string;
 }
 
-const AddTaskModal: React.FC<AddTaskModalProps> = ({
-  isOpen,
-  onAddTask
-}) => {
+const AddTaskModal: React.FC<AddTaskModalProps> = ({ isOpen, onAddTask }) => {
   const [taskName, setTaskName] = useState("");
   const [memo, setMemo] = useState("");
   const [category, setCategory] = useState("");
@@ -29,13 +26,13 @@ const AddTaskModal: React.FC<AddTaskModalProps> = ({
       category,
     };
     onAddTask(newTask);
-    document.getElementById("my_modal_3")!.close()
+    document.getElementById("my_modal_3")!.close();
   };
 
   return (
     <div>
       <button
-        className="btn"
+        className="btn mb-2"
         onClick={() => document.getElementById("my_modal_3")!.showModal()}
         {...handleSubmit}
       >
@@ -61,7 +58,6 @@ const AddTaskModal: React.FC<AddTaskModalProps> = ({
                   className="grow"
                 />
               </label>{" "}
-
               <label className="input input-bordered flex items-center gap-2">
                 メモ
                 <input
@@ -72,7 +68,6 @@ const AddTaskModal: React.FC<AddTaskModalProps> = ({
                   className="grow"
                 />
               </label>
-
               <label disabled selected>
                 <select
                   value={category}
