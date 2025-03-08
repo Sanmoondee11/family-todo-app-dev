@@ -17,7 +17,7 @@ function App() {
       <BrowserRouter>
         <div>
           {/* <Link to="/home">ホーム</Link> */}
-          <Link to="/">ホーム</Link>
+          {/* <Link to="/">ホーム</Link> */}
           <Routes>
             {/* <Route path="/" element={<Auth />} /> */}
             <Route path="/header" element={<Header />} />
