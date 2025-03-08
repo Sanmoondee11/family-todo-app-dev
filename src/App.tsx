@@ -1,4 +1,4 @@
-import { Route, Routes, Link, BrowserRouter } from "react-router-dom";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Home from "./pages/Home"; // 他のページもルートに追加
 import Header from "./pages/Header";
 import PokemonGacha from "./pages/PokemonGacha";
@@ -17,7 +17,7 @@ function App() {
       <BrowserRouter>
         <div>
           {/* <Link to="/home">ホーム</Link> */}
-          <Link to="/">ホーム</Link>
+          {/* <Link to="/">ホーム</Link> */}
           <Routes>
             {/* <Route path="/" element={<Auth />} /> */}
             <Route path="/header" element={<Header />} />
