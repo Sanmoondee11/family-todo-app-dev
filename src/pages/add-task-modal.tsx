@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 interface AddTaskModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -13,7 +14,7 @@ interface Task {
   category: string;
 }
 
-const AddTaskModal: React.FC<AddTaskModalProps> = ({ isOpen, onAddTask }) => {
+const AddTaskModal: React.FC<AddTaskModalProps> = ({  onAddTask }) => {
   const [taskName, setTaskName] = useState("");
   const [memo, setMemo] = useState("");
   const [category, setCategory] = useState("");
@@ -26,14 +27,20 @@ const AddTaskModal: React.FC<AddTaskModalProps> = ({ isOpen, onAddTask }) => {
       category,
     };
     onAddTask(newTask);
-    document.getElementById("my_modal_3")!.close();
+    const modal = document.getElementById("my_modal_3") as HTMLDialogElement;
+    modal.close();
   };
 
   return (
     <div>
       <button
         className="btn mb-2"
-        onClick={() => document.getElementById("my_modal_3")!.showModal()}
+        onClick={() => {
+          const dialogElement = document.getElementById(
+            "my_modal_3"
+          ) as HTMLDialogElement | null;
+          dialogElement!.showModal();
+        }}
         {...handleSubmit}
       >
         追加
@@ -68,7 +75,7 @@ const AddTaskModal: React.FC<AddTaskModalProps> = ({ isOpen, onAddTask }) => {
                   className="grow"
                 />
               </label>
-              <label disabled selected>
+              <label  >
                 <select
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}

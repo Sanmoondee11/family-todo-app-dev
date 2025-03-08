@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 interface SituationProps {
-  modalRef: React.RefObject<HTMLDialogElement>; // modalRef を受け取る
+  modalRef: React.RefObject<HTMLDialogElement|null>; // modalRef を受け取る
 }
 
 const Situation: React.FC<SituationProps> = ({ modalRef }) => {

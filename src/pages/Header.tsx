@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import AddTaskModal from "./add-task-modal";
 
 const Header: React.FC = () => {
   return (
@@ -39,9 +38,6 @@ const Header: React.FC = () => {
               </li>
               <li>
                 <Link to="/">ログイン画面main</Link>
-              </li>
-              <li>
-                <Link to="/login">ログイン画面</Link>
               </li>
             </ul>
           </div>
