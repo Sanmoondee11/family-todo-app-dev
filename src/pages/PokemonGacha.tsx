@@ -274,7 +274,7 @@ const PokemonGacha: React.FC = () => {
       <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-6">
         {hasPulled ? (
           <Link
-            to="/home"
+            to="/"
             className="btn btn-third px-6 py-2 text-lg font-bold"
           >
             ホームに戻る
