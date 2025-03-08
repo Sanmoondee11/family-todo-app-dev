@@ -7,7 +7,6 @@ interface TaskCardProps {
   task: Task;
 }
 
-
 const TaskCard: React.FC<TaskCardProps> = ({ task }) => {
   const modalRef = useRef<HTMLDialogElement>(null); // モーダルの参照を管理
 
