@@ -23,7 +23,7 @@ const Home: React.FC = () => {
           onClose={() => setIsAddTaskModalOpen(false)}
           onAddTask={addTask}
         />
-        <div>
+        <div className="space-y-3">
           {tasks.map((task) => (
             <TaskCard key={task.id} task={task} />
           ))}

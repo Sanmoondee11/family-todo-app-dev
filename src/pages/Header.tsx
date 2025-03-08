@@ -3,7 +3,7 @@ import AddTaskModal from "./add-task-modal";
 
 const Header: React.FC = () => {
   return (
-    <div className="  sm:text-4xl font-bold mb-6 drop-shadow-lg">
+    <div className=" sticky top-0 absolute z-50 sm:text-4xl font-bold mb-6 drop-shadow-lg">
       <div className="navbar">
         <div className="navbar-start">
           <div className="dropdown">
@@ -29,7 +29,7 @@ const Header: React.FC = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50  mt-3 w-52 p-2 shadow"
             >
               <li>
                 <Link to="/home">ホーム</Link>

@@ -17,8 +17,10 @@ const Situation: React.FC<SituationProps> = ({ modalRef }) => {
         </form>
         <h3 className="font-bold text-lg">タスクの進行状況</h3>
         <p className="py-4 space-y-3 ">
-        
-          <Link to="/gacha" className="btn btn-accent block w-full text-white">
+          <Link
+            to="/gacha"
+            className="btn btn-accent py-4 block w-full text-white "
+          >
             おわった！
           </Link>
         </p>
