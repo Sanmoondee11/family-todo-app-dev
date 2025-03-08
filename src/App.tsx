@@ -1,7 +1,6 @@
 import { Route, Routes, Link, BrowserRouter } from "react-router-dom";
 import Home from "./pages/Home"; // 他のページもルートに追加
 import Header from "./pages/Header";
-import LoginPage from "./pages/LoginPage";
 import PokemonGacha from "./pages/PokemonGacha";
 import PokedexPage from "./pages/PokedexPage";
 import { PokedexProvider } from "./context/PokedexContext"; // 追加
