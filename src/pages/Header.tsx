@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import AddTaskModal from "./add-task-modal";
 
 const Header: React.FC = () => {
   return (
@@ -32,16 +31,14 @@ const Header: React.FC = () => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50  mt-3 w-52 p-2 shadow"
             >
               <li>
-                <Link to="/home">ホーム</Link>
+                {/* <Link to="/home">ホーム</Link> */}
+                <Link to="/">ホーム</Link>
               </li>
               <li>
                 <Link to="/pokedex">図鑑</Link>
               </li>
               <li>
-                <Link to="/">ログイン画面main</Link>
-              </li>
-              <li>
-                <Link to="/login">ログイン画面</Link>
+                {/* <Link to="/">ログイン画面main</Link> */}
               </li>
             </ul>
           </div>
