@@ -13,18 +13,21 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div>
-      <Header />
-
-      <AddTaskModal
-        isOpen={isAddTaskModalOpen}
-        onClose={() => setIsAddTaskModalOpen(false)}
-        onAddTask={addTask}
-      />
-      <div>
-        {tasks.map((task) => (
-          <TaskCard key={task.id} task={task} />
-        ))}
+    <div className="min-h-screen back bg-gradient-to-b from-sky-300 to-sky-500 overflow-hidden ">
+      <div style={{ margin: "0 auto", maxWidth: "800px", padding: "20px" }}>
+        <div className="bg-transparent">
+          <Header />
+        </div>
+        <AddTaskModal
+          isOpen={isAddTaskModalOpen}
+          onClose={() => setIsAddTaskModalOpen(false)}
+          onAddTask={addTask}
+        />
+        <div>
+          {tasks.map((task) => (
+            <TaskCard key={task.id} task={task} />
+          ))}
+        </div>
       </div>
     </div>
   );

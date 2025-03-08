@@ -8,3 +8,4 @@ const supabaseKey =import.meta.env.VITE_SUPABASE_KEY; // APIキー
 
   // supabaseに接続するためにcreateClientを使う
 export const supabase = createClient<Database>(supabaseUrl, supabaseKey);
+

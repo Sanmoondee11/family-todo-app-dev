@@ -1,21 +1,15 @@
 // src/services/auth.ts
 import { supabase } from "../supabaseClient";
 
-export const signUp = async (
-  email: string,
-  password: string
-) => {
+export const signUp = async (email: string, password: string) => {
   const { data, error } = await supabase.auth.signUp({
-    email,
-    options: {
-      // ユーザー情報
-      data: {
-        user_name: 'fuka',
-      },
-    },
-    password,
+    email: "",
+    password: "",
   });
+  console.error(error);
+  console.log(data);
   return { data, error };
+  
 };
 
 export const signIn = async (email: string, password: string) => {
