@@ -1,5 +1,4 @@
 import { Route, Routes, Link, BrowserRouter } from "react-router-dom";
-import "./App.css";
 import Home from "./pages/Home"; // 他のページもルートに追加
 import Header from "./pages/Header";
 import LoginPage from "./pages/LoginPage";
@@ -18,20 +17,22 @@ function App() {
       {" "}
       <BrowserRouter>
         <div>
-          <nav>
-            <Link to="/gacha">ポケモンガチャ</Link>
-          </nav>
-
+          <Link to="/home">ホーム</Link>
           <Routes>
             <Route path="/" element={<Auth />} />
-            <Route path="/login" element={<LoginPage />} />
             <Route path="/header" element={<Header />} />
             <Route path="/home" element={<Home />} />
             <Route path="/gacha" element={<PokemonGacha />} />
             <Route path="/pokedex" element={<PokedexPage />} />
-            <Route path="/app" element={<MainLayout />} />
-            <Route index element={<Home />} />
-            <Route index element={<TodoApp />} />
+            <Route
+              path="/app"
+              element={
+                <MainLayout>
+                  <TodoApp />
+                  <Home />
+                </MainLayout>
+              }
+            />
           </Routes>
         </div>
       </BrowserRouter>
