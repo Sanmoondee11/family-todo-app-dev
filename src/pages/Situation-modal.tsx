@@ -6,6 +6,7 @@ interface SituationProps {
   modalRef: React.RefObject<HTMLDialogElement|null>; // modalRef を受け取る
 }
 
+
 const Situation: React.FC<SituationProps> = ({ modalRef }) => {
   return (
     <dialog ref={modalRef} id="my_modal_2" className="modal">
