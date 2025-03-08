@@ -31,13 +31,14 @@ const Header: React.FC = () => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
               <li>
-                <Link to="/home">ホーム</Link>
+                {/* <Link to="/home">ホーム</Link> */}
+                <Link to="/">ホーム</Link>
               </li>
               <li>
                 <Link to="/pokedex">図鑑</Link>
               </li>
               <li>
-                <Link to="/">ログイン画面main</Link>
+                {/* <Link to="/">ログイン画面main</Link> */}
               </li>
             </ul>
           </div>

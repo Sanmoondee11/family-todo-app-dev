@@ -16,11 +16,13 @@ function App() {
       {" "}
       <BrowserRouter>
         <div>
-          <Link to="/home">ホーム</Link>
+          {/* <Link to="/home">ホーム</Link> */}
+          <Link to="/">ホーム</Link>
           <Routes>
-            <Route path="/" element={<Auth />} />
+            {/* <Route path="/" element={<Auth />} /> */}
             <Route path="/header" element={<Header />} />
-            <Route path="/home" element={<Home />} />
+            {/* <Route path="/home" element={<Home />} /> */}
+            <Route path="/" element={<Home />} />
             <Route path="/gacha" element={<PokemonGacha />} />
             <Route path="/pokedex" element={<PokedexPage />} />
             <Route
