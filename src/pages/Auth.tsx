@@ -20,7 +20,7 @@ const Auth: React.FC = () => {
           // ログイン後のリダイレクト処理などを追加
         }
       } else {
-        const {  error } = await signUp(email, password);
+        const { error } = await signUp(email, password);
         if (error) {
           setErrorMessage("サインアップエラー: " + error.message);
         } else {

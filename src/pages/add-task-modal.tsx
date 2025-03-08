@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Header from "./Header";
 
 interface AddTaskModalProps {
   isOpen: boolean;
@@ -33,7 +32,7 @@ const AddTaskModal: React.FC<AddTaskModalProps> = ({ isOpen, onAddTask }) => {
   return (
     <div>
       <button
-        className="btn"
+        className="btn mb-2"
         onClick={() => document.getElementById("my_modal_3")!.showModal()}
         {...handleSubmit}
       >
