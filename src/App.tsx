@@ -4,7 +4,7 @@ import Header from "./pages/Header";
 import PokemonGacha from "./pages/PokemonGacha";
 import PokedexPage from "./pages/PokedexPage";
 import { PokedexProvider } from "./context/PokedexContext"; // 追加
-import Auth from "./pages/Auth";
+// import Auth from "./pages/Auth";
 import MainLayout from "./layouts/MainLayout";
 import TodoApp from "./feautures/TodoApp";
 
