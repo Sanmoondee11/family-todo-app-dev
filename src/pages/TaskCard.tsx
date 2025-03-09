@@ -1,17 +1,17 @@
-// TaskCard.tsx
 import React, { useRef } from "react";
 import { Task } from "../types/Task"; // Task 型をインポート
 import Situation from "./Situation-modal";
 
 interface TaskCardProps {
   task: Task;
+  onTaskComplete: (taskId: string) => void; // タスク完了時に実行される関数を受け取る
 }
 
-const TaskCard: React.FC<TaskCardProps> = ({ task }) => {
+const TaskCard: React.FC<TaskCardProps> = ({ task, onTaskComplete }) => {
   const modalRef = useRef<HTMLDialogElement>(null); // モーダルの参照を管理
 
   const openModal = () => {
-    modalRef.current?.showModal();
+    modalRef.current?.showModal(); // モーダルを表示
   };
 
   return (
@@ -32,7 +32,11 @@ const TaskCard: React.FC<TaskCardProps> = ({ task }) => {
           <p>{task.category}</p>
         </div>
       </div>
-      <Situation modalRef={modalRef} /> {/* modalRef を渡す */}
+      <Situation
+        modalRef={modalRef}
+        onTaskComplete={() => onTaskComplete(task.id.toString())}
+      />{" "}
+      {/* タスク完了時に削除処理を呼び出す */}
     </>
   );
 };
