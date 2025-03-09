@@ -29,7 +29,7 @@ const PokedexPage: React.FC = () => {
       <div className="max-w-4xl mx-auto">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-3xl font-bold text-white">ポケモン図鑑</h1>
-          <Link to="" className="btn">
+          <Link to="/" className="btn">
             ホーム
           </Link>
         </div>
