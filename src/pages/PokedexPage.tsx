@@ -2,7 +2,6 @@ import type React from "react";
 import { useState } from "react";
 import { usePokedex } from "../context/PokedexContext";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
 import Header from "./Header";
 
 const PokedexPage: React.FC = () => {
