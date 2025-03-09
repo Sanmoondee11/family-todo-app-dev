@@ -40,7 +40,7 @@ const Home: React.FC = () => {
           onClose={() => setIsAddTaskModalOpen(false)}
           onAddTask={addTask}
         />
-        <div className="space-y-3">
+        <div className="space-y-3 md:grid md:grid-cols-3 gap-4">
           {tasks.map((task) => (
             <TaskCard
               key={task.id}
